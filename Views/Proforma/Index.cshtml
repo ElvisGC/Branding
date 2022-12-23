@@ -1,0 +1,69 @@
+@model IEnumerable<branding.Models.Proforma>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<section id="biografia" class="biografia section-bggg">
+<div class="container">
+    <div class="section-title">
+<h2 aling = "center "data-aos="fade-in">Carrito</h2>
+</div>
+<table class="table table-hover">
+    <thead class="tables">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+    <thead class="tabless">
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Name)
+            </td>
+            <td>
+               S/. @Html.DisplayFor(modelItem => item.Price)
+            </td>            
+            <td>
+                <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.ID">Detalles</a> |
+                <a class="btn btn-primary" asp-action="Delete" asp-route-id="@item.ID">Borrar</a>
+            </td>
+        </tr>
+        </thead>
+}
+    </tbody>
+</table>
+      @{
+         var total = 0.0;
+         var contar = 1;
+      }
+      @foreach (var item in Model){
+         <tr>
+            @{
+               total = total + item.Price;
+               contar++;
+            }
+         </tr>
+      }
+
+<div class="container">
+
+         <h5 >Total: S/ @total </h5> 
+
+
+
+
+<a href="/MetodoPago/metodopago" class="btn btn-primary text-white" >CONTINUAR</a> 
+</div>

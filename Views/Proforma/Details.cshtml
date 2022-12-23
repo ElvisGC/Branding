@@ -1,0 +1,44 @@
+@model branding.Models.Proforma
+
+@{
+    ViewData["Title"] = "Details - ";
+}
+<section id="biografia" class="biografia section-bggg">
+
+
+<div>
+    <div class="container">
+    <div class="section-title">
+    <h2 aling = "center "data-aos="fade-in">Detalles</h2>   
+    <h4 data-aos="fade-in">Proforma</h4>
+    </div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Producto.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Producto.Name)
+        </dd>
+    </dl>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID"><h9>Editar</h9></a> |
+    <a asp-action="Index"><h9>Volver a la Lista</h9></a>
+</div>
+
+</div>
+
+
+

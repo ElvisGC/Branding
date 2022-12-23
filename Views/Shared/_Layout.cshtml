@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]Andrómeda</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="~/lib/icofont/icofont.min.css" rel="stylesheet">
+    <link href="~/lib/boxicons/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+  
+    <header>
+        <div class="menu-principal">
+
+       
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-0">
+            <div class="container">
+             
+                           
+                <a class="navbar-brand text-whitee" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/alfalogo.png" width="210" height="75"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        
+                        
+
+                           <li class="nav-item">
+                        </li> 
+                            <a class="nav-link text-white"  asp-area="" asp-controller="Quienes" asp-action="Somos">QUIENES SOMOS </a>
+
+                                           <li class="nav-item">
+                        </li>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Portafolio" asp-action="portafolio"> PLANES DE INVERSIÓN</a>
+                    
+     
+                        <partial name="_MenuPartial" />  
+                     
+
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+        
+        </div>
+
+
+        
+    </header>
+
+    
+    <div >
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>        
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+
+
+<style>
+.btn-whatsapp {
+       display:block;
+       width:45px;
+       height:px;
+       color:#fff;
+       position: fixed;
+       right:20px;
+       bottom:20px;
+       border-radius:50%;
+       line-height:45px;
+       text-align:center;
+       z-index:999;
+}
+</style>
+<div class="btn-whatsapp">
+<a href="https://api.whatsapp.com/send?phone=916080836" target="_blank">
+<img src="https://i.ibb.co/kqBsK2f/w2.png" alt="">
+</a>
+</div>
+
+
+
+
+</html>
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container" data-aos="fade-up">
+        <div class="row  justify-content-center">
+          <div class="col-lg-6">
+            
+            <h3>ANDRÓMEDA</h3>
+            <p>Nuestras Redes Sociales</p>
+          </div>
+        </div>
+        <div class="social-links">
+          
+          <a href="https://www.facebook.com/andromedabursatilcapital/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/andromedabursatilcapital/?igshid=YmMyMTA2M2Y%3D" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UC0VA82FUIrB63PUGLng5UAQ" class="youtube" target="_blank"><i class="bx bxl-youtube" ></i></a>
+          
+
+
+         </div>
+         
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy;ANDRÓMEDA FONDO DE INVERSIÓN | Todos los derechos reservados. 
+      </div>
+      <div class="credits">
+        Contacto (+51) Cel:916080836 - Cel:992668973
+
+      </div>
+    </div>
+  </footer>
+

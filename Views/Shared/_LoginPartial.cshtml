@@ -1,0 +1,32 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item">
+        <a  class="nav-link text-white" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@User.Identity.Name</a>
+    </li>
+    <li class="nav-item">
+        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button type="submit" class="nav-link btn btn-link text-white">Logout</button>
+        </form>
+    </li>
+}
+else
+{
+
+
+  //iconos de redes ala derecha
+        <div class="social-links">
+          
+          <a href="https://www.facebook.com/andromedabursatilcapital/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i>  </a>
+          <a href="https://www.instagram.com/andromedabursatilcapital/?igshid=YmMyMTA2M2Y%3D" class="instagram" target="_blank"><i class="bx bxl-instagram"></i>  </a>
+          <a href="https://www.youtube.com/channel/UC0VA82FUIrB63PUGLng5UAQ" class="youtube" target="_blank"><i class="bx bxl-youtube" ></i>  </a>
+
+         </div>
+
+ 
+}
+</ul>
